@@ -18,6 +18,7 @@ class _Page1State extends State<Page1> {
     return ResponsiveContainer(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Text('Welcome to this app!'),
         ),
         body: Center(

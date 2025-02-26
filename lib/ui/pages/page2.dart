@@ -18,7 +18,7 @@ class Page2 extends StatelessWidget {
           actions: [
             IconButton(
                 //todo: Implement back navigation logic making sure to clean the navigation stack
-                onPressed: () => Get.back(),
+                onPressed: () => Get.toNamed("/"),
                 icon: const Icon(Icons.logout))
           ],
         ),
