@@ -6,18 +6,19 @@ import '../widgets/responsive_widget.dart';
 class Page2 extends StatelessWidget {
   Page2({super.key});
   // Obtain the name parameter from the route
-  final String? name = 'some name';
+  final String? name = Get.parameters['name'];
 
   @override
   Widget build(BuildContext context) {
     return ResponsiveContainer(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text('Welcome $name!'),
           actions: [
             IconButton(
                 //todo: Implement back navigation logic making sure to clean the navigation stack
-                onPressed: () => null,
+                onPressed: () => Get.back(),
                 icon: const Icon(Icons.logout))
           ],
         ),
@@ -36,7 +37,7 @@ class Page2 extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     //todo: Implement navigation to page3a sending the name as a parameter
-                    onPressed: () => null,
+                    onPressed: () => Get.toNamed("/page3a/?name=$name"),
                     child: const Text(
                       'Option A',
                     ),
